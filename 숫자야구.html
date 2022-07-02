@@ -8,15 +8,16 @@
 </head>
 
 <body>
-  <h1 style="font-size: 30pt;">숫자야구 게임</h1>
-  <p id="chance"></p>
-  <p id="number"></p>
+  <h1 style="font-size: 26pt;">숫자야구 게임</h1>
+  <!-- <p id="number"></p> -->
   <label for="guess">4자리 숫자 입력: </label>
   <input type="text" id="guess" minlength="4" maxlength="4">
   <input type="submit" value="확인하기" id="submit">
+  <div style="line-height: 150%;"><br></div>
+  <span id="chance"></span>
+  <button id="newgame">다시 시작</button>
   <p id="message"></p>
   <p id="done"></p>
-  <button id="newgame">다시 시작</button>
 
   <script type="text/javascript" src="숫자야구.js"></script>
 </body>
