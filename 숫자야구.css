@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
 * {
-  font-size: 16pt;  
+  font-size:16pt;
+  text-align:center;
+  align="center"
 }
 
 html { 
-	font-family: sans-serif;
-  text-align: center;
+	font-family:Arial;
+  text-align:center;
   align="center"
 }
 
@@ -15,7 +17,45 @@ body {
   margin: 0 auto;
 }
 
-.lastResult {
-  color: white;
-  padding: 3px;
+#guess {
+  width:80px;
+  height:36px;
+  font-size:25px;
+  margin-left: 10px;
 }
+
+#newgame, #submit {
+  background-color:#33bdef;
+  border-radius:6px;
+  border:0px solid #057fd0;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:19px;
+  font-weight:bold;
+  padding:7px 22px;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+#submit:disabled{
+  background-color:#BDBDBD;
+}
+
+#newgame:hover, #submit:hover:enabled {
+  background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  background-color:#019ad2;
+  position:relative;
+  top:1px;
+}
+
+#done {
+  column-count: 2;
+  column-gap: 15px;
+  width: 350px;
+  margin: 0 auto;
+  line-height: 200%;
+  column-rule : 5px dotted blue
+}
+
