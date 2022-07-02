@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+* {
+  font-size: 16pt;  
+}
+
+html { 
+	font-family: sans-serif;
+  text-align: center;
+  align="center"
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.lastResult {
+  color: white;
+  padding: 3px;
+}
