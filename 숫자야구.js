@@ -1,9 +1,9 @@
-let number = "", guess = "", message = "";
+let number = "", guess = "", message = "<br>";
 let chance = 7, done = ""; 
 
 function update() {
   document.getElementById("chance").innerHTML = "남은 기회: " + chance;
-  document.getElementById("number").innerHTML = "숫자: " + number;
+  // document.getElementById("number").innerHTML = "숫자: " + number;
   document.getElementById("message").innerHTML = message;
   document.getElementById("done").innerHTML = done;
 }
@@ -33,8 +33,8 @@ function checkguess() {
       if (number[i] === guess[(i + j) % 4]) ball++;      
     }
   }
-  message = "";
-  done += guess + " -> " + strike + "S " + ball + "B<br>";
+  message = "<br>";
+  done += guess + " → " + strike + "S " + ball + "B<br>";
   chance--; 
   if (strike === 4) clear();
   else if (chance === 0) gameover();
@@ -47,12 +47,14 @@ submit.addEventListener('click', checkguess);
 function gameover() {
   guess.disabled = true;
   submit.disabled = true;
+  message = "아깝네요 ㅠㅠ 정답은 " + number + "입니다";
+  update();
 }
 
 function clear() {
   guess.disabled = true;
   submit.disabled = true;
-  message = "코드는 abcde입니다";
+  message = "정답입니다! 이 게임의 코드는 abcde입니다";
   update();
 }
 
@@ -60,7 +62,7 @@ function resetgame() {
   guess.disabled = false;
   submit.disabled = false;
   let arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  number = "", guess = "", message = "";
+  number = "", guess = "", message = "<br>";
   chance = 7, done = ""; 
 
   for (var i = 0; i < 4; i++){
