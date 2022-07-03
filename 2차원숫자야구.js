@@ -1,5 +1,5 @@
 let number = [], guess = [], message = "<br>";
-let chance = 8, done = "";
+let chance = 7, done = "";
 let donelist = ["done1", "done2", "done3", "done4"]; 
 let dones = ["","","",""]; 
 
@@ -96,7 +96,7 @@ function resetgame() {
   let arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   let loc = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   number = [], guess = [], message = "<br>";
-  chance = 8, dones = ["","","",""]; 
+  chance = 7, dones = ["","","",""]; 
 
   for (var i = 0; i < 4; i++){
     var tmp1 = Math.floor(Math.random() * (10 - i));
