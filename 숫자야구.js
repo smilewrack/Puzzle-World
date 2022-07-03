@@ -1,5 +1,5 @@
 let number = "", guess = "", message = "<br>";
-let chance = 7, done = ""; 
+let chance = 6, done = ""; 
 
 function update() {
   document.getElementById("chance").innerHTML = "남은 기회: " + chance;
@@ -63,7 +63,7 @@ function resetgame() {
   submit.disabled = false;
   let arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   number = "", guess = "", message = "<br>";
-  chance = 7, done = ""; 
+  chance = 6, done = ""; 
 
   for (var i = 0; i < 4; i++){
     var tmp = Math.floor(Math.random() * (10 - i));
