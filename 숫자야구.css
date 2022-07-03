@@ -7,13 +7,13 @@
 }
 
 html { 
-	font-family:Arial;
+  font-family:Arial;
   text-align:center;
   align="center"
 }
 
 body {
-  margin: 0 auto;
+  margin: auto;
 }
 
 #guess {
@@ -26,7 +26,6 @@ body {
 #newgame, #submit {
   background-color:#33bdef;
   border-radius:6px;
-  border:0px solid #057fd0;
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
