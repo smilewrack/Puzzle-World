@@ -1,5 +1,5 @@
 let number = [], guess = [], message = "<br>";
-let chance = 8, done = "";
+let chance = 8,  done = "";
 let donelist = ["done1", "done2", "done3", "done4"]; 
 let dones = ["","","",""]; 
 
