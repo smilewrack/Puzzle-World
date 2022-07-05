@@ -79,8 +79,8 @@ submit.addEventListener('click', checkguess);
 function gameover() {
   guess.disabled = true;
   submit.disabled = true;
-  message = "아깝네요 ㅠㅠ 정답은 아래에서 확인하세요!";
-  dones[0] += gridprint(number) + "정답";
+  message = "아깝네요 ㅠㅠ 정답은 옆에서 확인하세요!";
+  document.getElementById("answer").innerHTML = gridprint(number) + "정답";
   update();
 }
 
@@ -105,7 +105,8 @@ function resetgame() {
     number.push([arr[tmp1], parseInt(loc[tmp2] / 3), loc[tmp2] % 3]);
     arr.splice(tmp1, 1);
     loc.splice(tmp2, 1);
-  } 
+  }
+  document.getElementById("answer").innerHTML = "";
   update();
 }
 
