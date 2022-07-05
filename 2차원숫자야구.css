@@ -50,7 +50,7 @@ body {
   line-height: 150%;
 }
 
-#done0, #done1, #done2, #done3, #done4{
+#done0, #done1, #done2, #done3, #done4, #answer{
   float: left;
   line-height: 150%;
   margin-right: 20px;
