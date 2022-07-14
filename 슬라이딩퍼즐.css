@@ -18,7 +18,7 @@ body, table {
 
 p{
   font-family:Arial;
-  font-size:30px;
+  font-size:25px;
   text-align:center;
   align="center"
 }
@@ -74,7 +74,3 @@ td {
   float: left;
   margin-right: 30px;
 }
-
-
-
-
