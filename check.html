@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>최종 확인</title>
+  <link rel="stylesheet" href="check.css">
+  <script type="text/javascript" src="소스보기방지.js"></script>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+<h1 style="font-size: 26pt;">최종 확인</h1>
+<div id = "wrap">
+  <table>
+    <tr>
+      <td id = "game0">2차원<br>숫자야구</td>
+      <td id = "game1">Loopover</td>
+      <td id = "game2">육각<br>돌리기</td>
+    </tr>
+    <tr>
+      <td id = "game3">Knight's<br>Tour</td>
+      <td id = "game4">Lights<br>Out</td>
+      <td id = "game5">색<br>맞추기</td>
+    </tr>
+    <tr>
+      <td id = "game6">숫자<br>맞추기</td>
+      <td id = "game7">숫자야구</td>
+      <td id = "game8">슬라이딩<br>퍼즐</td>
+    </tr>
+  </table>
+  <div>&nbsp</div>
+  <div class = "res">동메달 코드</div>
+  <div class = "res" id = "medal1">&nbsp</div>
+  <div class = "res">은메달 코드</div>
+  <div class = "res" id = "medal2">&nbsp</div>
+  <div class = "res">금메달 코드</div>
+  <div class = "res" id = "medal3">&nbsp</div>
+</div>
+<br>
+<label for="guess" style="clear:both">게임 코드 입력: </label>
+<input type="text" id="guess" minlength="8" maxlength="10">
+<input type="submit" value="확인하기" id="submit">
+
+<script type="text/javascript" src="check.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@ function update() {
 
 function checkguess() {
   guess = document.getElementById("guess").value;
+  document.getElementById("guess").value = '';
   if (isNaN(guess) || parseInt(guess) !== Number(guess) || Number(guess) < 123){
     message = "4자리 자연수를 입력해야 합니다";
     document.getElementById("message").innerHTML = message;
@@ -54,7 +55,7 @@ function gameover() {
 function clear() {
   guess.disabled = true;
   submit.disabled = true;
-  message = "정답입니다! 이 게임의 코드는 abcde입니다";
+  message = "정답입니다! 이 게임의 코드는 " + crypt('xufu6g5q3') + "입니다";
   update();
 }
 

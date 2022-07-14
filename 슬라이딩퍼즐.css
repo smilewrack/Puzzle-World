@@ -7,16 +7,23 @@
 }
 
 html { 
-  font-family:Arial;
+	font-family:Arial;
   text-align:center;
   align="center"
 }
 
-body {
+body, table {
   margin: auto;
 }
 
-#newgame, #submit {
+p{
+  font-family:Arial;
+  font-size:30px;
+  text-align:center;
+  align="center"
+}
+
+button {
   background-color:#33bdef;
   border-radius:6px;
   border:0px solid #057fd0;
@@ -28,48 +35,46 @@ body {
   font-weight:bold;
   padding:7px 22px;
   text-decoration:none;
+  margin: 20px 0px 20px 0px;
 }
 
-#submit:disabled{
-  background-color:#BDBDBD;
-}
-
-#newgame:hover, #submit:hover:enabled {
+button:hover {
   background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
   background-color:#019ad2;
   position:relative;
   top:1px;
 }
 
-#grid{
+#block0{
+  background-color:#ffffff;
+  border:2px solid #ffffff;
+}
+
+td {
+  border-radius:12px;
+  border:2px solid #000000;
+  display:inline-block;
+  color:#000000;
+  font-family:Arial;
+  font-size:45px;
+  font-weight:bold;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  margin-left:1px;
+  margin-right:1px;
+}
+
+#wrap {
+  width:500px;
+  margin: auto;
+}
+
+#board{
   float: left;
   margin-right: 30px;
 }
 
-#message{
-  line-height: 150%;
-}
 
-#done0, #done1, #done2, #done3, #done4, #answer{
-  float: left;
-  line-height: 150%;
-  margin-right: 20px;
-  margin-left: 20px;
-}
 
-#wrap {
-  width: 370px;
-  margin: auto;
-}
 
-#wrap2 {
-  width: 570px;
-  margin: auto;
-}
-
-[type = "text"]{
-  width:36px;
-  height:36px;
-  font-size:25px;
-  margin-top:6px;
-}

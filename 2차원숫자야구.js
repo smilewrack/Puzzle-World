@@ -1,5 +1,5 @@
 let number = [], guess = [], message = "<br>";
-let chance = 8,  done = "";
+let chance = 8, done = "";
 let donelist = ["done1", "done2", "done3", "done4"]; 
 let dones = ["","","",""]; 
 
@@ -44,6 +44,7 @@ function checkguess() {
   for (var i = 0; i < 9; i++){
     var tmp = document.getElementById("guess" + String(i + 1)).value;
     if (tmp !== "" && !isNaN(tmp)) guess.push([tmp, parseInt(i / 3), i % 3]);
+    document.getElementById("guess" + String(i + 1)).value = '';
   }
   if (guess.length < 4) {
     message = "숫자 4개를 채워주세요";
@@ -87,7 +88,7 @@ function gameover() {
 function clear() {
   guess.disabled = true;
   submit.disabled = true;
-  message = "정답입니다! 이 게임의 코드는 abcde입니다";
+  message = "정답입니다! 이 게임의 코드는 " + crypt('4dmy8rewp') + "입니다";
   update();
 }
 
@@ -106,7 +107,7 @@ function resetgame() {
     arr.splice(tmp1, 1);
     loc.splice(tmp2, 1);
   }
-  document.getElementById("answer").innerHTML = "";
+  document.getElementById("answer").innerHTML = ""; 
   update();
 }
 

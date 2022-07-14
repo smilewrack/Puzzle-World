@@ -4,7 +4,6 @@
   font-size:16pt;
   text-align:center;
   align="center"
-  font-family: sans-serif;
 }
 
 html { 
@@ -13,22 +12,22 @@ html {
   align="center"
 }
 
-body {
+body{
   margin: auto;
 }
 
-#guess {
-  width:80px;
-  height:36px;
-  font-size:25px;
-  margin-left: 10px;
+p{
+  font-family:Arial;
+  font-size:30px;
+  text-align:center;
+  align="center"
 }
 
-#newgame, #submit {
+button {
   background-color:#33bdef;
   border-radius:6px;
+  border:0px solid #057fd0;
   display:inline-block;
-  border:0px solid #000000;
   cursor:pointer;
   color:#ffffff;
   font-family:Arial;
@@ -36,26 +35,40 @@ body {
   font-weight:bold;
   padding:7px 22px;
   text-decoration:none;
-  margin-left:20px;
+  margin: 0px 20px 0px 20px;
 }
 
-#submit:disabled{
-  background-color:#BDBDBD;
-}
-
-#newgame:hover, #submit:hover:enabled {
+button:hover {
   background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
   background-color:#019ad2;
   position:relative;
   top:1px;
 }
 
-#done {
-  column-count: 2;
-  column-gap: 15px;
-  width: 350px;
-  margin: 0 auto;
-  line-height: 200%;
-  column-rule : 5px dotted blue
+.tile {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  margin: 0px;
+  line-height: 65px;
+  border: 1px solid #000000;
+  font-family:Arial;
+  font-size:40px;
+  font-weight:bold;
+  color:#000000;
+}
+
+#wrap {
+  width: 900px;
+  margin: auto;
+}
+
+#grid0, #grid1, #grid2{
+  float: left;
+  margin: 15px;
+}
+
+#empty {
+  margin-bottom: 30px;
 }
 

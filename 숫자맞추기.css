@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+* {
+  font-size:16pt;
+  text-align:center;
+  align="center"
+}
+
+html { 
+	font-family:Arial;
+  text-align:center;
+  align="center"
+}
+
+body{
+  margin: auto;
+}
+
+p{
+  font-family:Arial;
+  font-size:30px;
+  text-align:center;
+  align="center"
+}
+
+button {
+  background-color:#33bdef;
+  border-radius:6px;
+  border:0px solid #057fd0;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:19px;
+  font-weight:bold;
+  padding:7px 22px;
+  text-decoration:none;
+  margin: 0px 20px 0px 20px;
+}
+
+button:hover {
+  background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  background-color:#019ad2;
+  position:relative;
+  top:1px;
+}
+
+.tile1, .tile2 { border-top-width: 1px; border-bottom-width: 0px;}
+
+.tile1, .tile3 { border-left-width: 1px; border-right-width: 0px;}
+
+.tile3, .tile4 { border-top-width: 0px; border-bottom-width: 1px;}
+
+.tile2, .tile4 { border-left-width: 0px; border-right-width: 1px;}
+
+.tile1, .tile2, .tile3, .tile4 {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  font-size:30px;
+}
+
+.tile0 {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size:35px;
+  border-width: 1px;
+}
+
+.tile0, .tile1, .tile2, .tile3, .tile4{
+  display: inline-block;
+  font-weight:bold;
+  color:#000000;
+  border-style: solid; 
+  border-color: black;
+  font-family:Arial;
+  margin: 0px;
+}
+
+#wrap {
+  width: 660px;
+  margin: auto;
+}
+
+#grid0, #grid1, #grid2{
+  float: left;
+  margin: 14px 25px 14px 25px;
+}

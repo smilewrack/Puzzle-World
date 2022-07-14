@@ -4,7 +4,6 @@
   font-size:16pt;
   text-align:center;
   align="center"
-  font-family: sans-serif;
 }
 
 html { 
@@ -13,22 +12,27 @@ html {
   align="center"
 }
 
-body {
+body{
   margin: auto;
 }
 
-#guess {
-  width:80px;
-  height:36px;
-  font-size:25px;
-  margin-left: 10px;
+p{
+  font-family:Arial;
+  font-size:30px;
+  text-align:center;
+  align="center"
 }
 
-#newgame, #submit {
+#rotdir {
+  font-size:30px;
+  padding:7px 15px;
+}
+
+button {
   background-color:#33bdef;
   border-radius:6px;
+  border:0px solid #057fd0;
   display:inline-block;
-  border:0px solid #000000;
   cursor:pointer;
   color:#ffffff;
   font-family:Arial;
@@ -36,26 +40,39 @@ body {
   font-weight:bold;
   padding:7px 22px;
   text-decoration:none;
-  margin-left:20px;
+  margin: 20px;
 }
 
-#submit:disabled{
-  background-color:#BDBDBD;
-}
-
-#newgame:hover, #submit:hover:enabled {
+button:hover {
   background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
   background-color:#019ad2;
   position:relative;
   top:1px;
 }
 
-#done {
-  column-count: 2;
-  column-gap: 15px;
-  width: 350px;
-  margin: 0 auto;
-  line-height: 200%;
-  column-rule : 5px dotted blue
+.marble {
+  display: inline-block;
+  width: 66px;
+  height: 66px;
+  border-radius: 33px;
+  margin: 0px 6px 0px 6px;
+}
+
+#wrap {
+  width: 600px;
+  margin: auto;
+}
+
+#grid{
+  float: left;
+}
+
+#abc {
+  float: left;
+  margin: 30px;
+}
+
+#empty {
+  margin-bottom: 30px;
 }
 

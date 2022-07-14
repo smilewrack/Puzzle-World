@@ -8,23 +8,29 @@
 }
 
 html { 
-	font-family:Arial;
+  font-family:Arial;
   text-align:center;
   align="center"
 }
 
-body {
+body, table {
   margin: auto;
 }
 
+table{
+  border-spacing: 10px;
+  float: left;
+  margin: 10px 30px 10px 30px;
+}
+
 #guess {
-  width:80px;
+  width:150px;
   height:36px;
   font-size:25px;
   margin-left: 10px;
 }
 
-#newgame, #submit {
+#submit {
   background-color:#33bdef;
   border-radius:6px;
   display:inline-block;
@@ -43,19 +49,32 @@ body {
   background-color:#BDBDBD;
 }
 
-#newgame:hover, #submit:hover:enabled {
+#submit:hover:enabled {
   background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
   background-color:#019ad2;
   position:relative;
   top:1px;
 }
 
-#done {
-  column-count: 2;
-  column-gap: 15px;
-  width: 350px;
-  margin: 0 auto;
-  line-height: 200%;
-  column-rule : 5px dotted blue
+td {
+  border-radius:25px;
+  border:2px solid #000000;
+  color:#000000;
+  display:tabel-cell;
+  text-align:center;
+  font-size:23px;
+  height: 110px;
+  width: 110px;
+  line-height: 45px;
+  margin: 8px 9px 8px 9px;
 }
 
+#wrap {
+  width:650px;
+  margin: auto;
+}
+
+.res{
+  font-size: 27px;
+  margin: 0px 0px 30px 20px;
+}
