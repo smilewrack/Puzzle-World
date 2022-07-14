@@ -16,6 +16,13 @@ body {
   margin: auto;
 }
 
+p{
+  font-family:Arial;
+  font-size:25px;
+  text-align:center;
+  align="center"
+}
+
 #newgame, #submit {
   background-color:#33bdef;
   border-radius:6px;
