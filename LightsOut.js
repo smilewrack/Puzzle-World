@@ -11,10 +11,13 @@ function flip4(a,b){
   if (b > 0) flip(a, b - 1);
   if (b < 4) flip(a, b + 1);
   chance--;
+  if (chance === 0) 
+    document.getElementById("message").innerHTML = "<br>횟수가 초과되었습니다";
   document.getElementById("chance").innerHTML = chance;
 }
 
 function checkclear(){
+  if (chance < 0) return;
   for (var i = 0; i < 5; i++) {
     for (var j = 0; j < 5; j++) {
       if (document.getElementById('bulb' + i + j).checked){
