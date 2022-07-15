@@ -1,15 +1,22 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Amsterdam';
+  src:local('글꼴/암스테르담.woff2'),
+      local('글꼴/암스테르담.woff'), 
+      url('글꼴/암스테르담.woff2') format('woff2'),
+      url('글꼴/암스테르담.woff') format('woff');
+}
+
 * {
-  font-size:16pt;
+  font-family: 'Amsterdam';
+  font-weight: bold;
+  font-size:20pt;
   text-align:center;
-  align="center"
 }
 
 html { 
-  font-family:Arial;
   text-align:center;
-  align="center"
 }
 
 body {
@@ -17,10 +24,8 @@ body {
 }
 
 p{
-  font-family:Arial;
-  font-size:25px;
+  font-size:30px;
   text-align:center;
-  align="center"
 }
 
 #newgame, #submit {
@@ -30,11 +35,11 @@ p{
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
-  font-family:Arial;
-  font-size:19px;
+  font-size:23px;
   font-weight:bold;
   padding:7px 22px;
   text-decoration:none;
+  margin: 5px 10px 5px 10px;
 }
 
 #submit:disabled{
@@ -50,27 +55,33 @@ p{
 
 #grid{
   float: left;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 #message{
-  line-height: 150%;
+  line-height: 130%;
 }
 
-#done0, #done1, #done2, #done3, #done4, #answer{
-  float: left;
+.done{
   line-height: 150%;
-  margin-right: 20px;
-  margin-left: 20px;
+  float: left;
+  margin : 0px 20px 20px 20px;
 }
 
 #wrap {
-  width: 370px;
+  width: 800px;
+  margin: auto;
+}
+
+#wrap1 {
+  width: 350px;
+  float: left;
   margin: auto;
 }
 
 #wrap2 {
-  width: 570px;
+  width: 400px;
+  float: left;
   margin: auto;
 }
 
@@ -78,5 +89,5 @@ p{
   width:36px;
   height:36px;
   font-size:25px;
-  margin-top:6px;
+  margin:4px;
 }

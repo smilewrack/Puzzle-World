@@ -1,15 +1,22 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Amsterdam';
+  src:local('글꼴/암스테르담.woff2'),
+      local('글꼴/암스테르담.woff'), 
+      url('글꼴/암스테르담.woff2') format('woff2'),
+      url('글꼴/암스테르담.woff') format('woff');
+}
+
 * {
-  font-size:16pt;
+  font-family: 'Amsterdam';
+  font-weight: bold;
+  font-size:20pt;
   text-align:center;
-  align="center"
 }
 
 html { 
-	font-family:Arial;
   text-align:center;
-  align="center"
 }
 
 body{
@@ -17,10 +24,8 @@ body{
 }
 
 p{
-  font-family:Arial;
-  font-size:25px;
+  font-size:30px;
   text-align:center;
-  align="center"
 }
 
 button {
@@ -30,8 +35,7 @@ button {
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
-  font-family:Arial;
-  font-size:19px;
+  font-size:23px;
   font-weight:bold;
   padding:7px 22px;
   text-decoration:none;
@@ -57,14 +61,14 @@ button:hover {
   width: 45px;
   height: 45px;
   line-height: 45px;
-  font-size:30px;
+  font-size:35px;
 }
 
 .tile0 {
   width: 60px;
   height: 60px;
   line-height: 60px;
-  font-size:35px;
+  font-size:40px;
   border-width: 1px;
 }
 
@@ -74,7 +78,6 @@ button:hover {
   color:#000000;
   border-style: solid; 
   border-color: black;
-  font-family:Arial;
   margin: 0px;
 }
 

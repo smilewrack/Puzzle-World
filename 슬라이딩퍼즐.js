@@ -15,7 +15,7 @@ function timer(){
   document.getElementById("time").innerHTML = time;
   if (time >= limit){
     clearInterval(clock);
-    document.getElementById("message").innerHTML = "<br>시간이 초과되었습니다";
+    document.getElementById("message").innerHTML = "시간이 초과되었습니다";
   }
 }
 

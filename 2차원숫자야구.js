@@ -1,14 +1,22 @@
-let number = [], guess = [], message = "<br>";
-let chance = 8, done = "";
-let donelist = ["done1", "done2", "done3", "done4"]; 
-let dones = ["","","",""]; 
+let number = [], guess = [], message = "";
+let chance = 8;
+
+let html1 = "", html2 = "";
+for (var i = 0; i < 3; i++){
+  for (var j = 0; j < 3; j++){
+    html1 += '<input type = "text" id= "guess' + (i*3+j) + '" maxlength = "1">';
+    html2 += '<div class = "done" id= "done' + (i*3+j) + '"></div>';
+  }
+  html1 += "<br>";
+}
+
+var ew = document.getElementById("wrap1").innerHTML;
+document.getElementById("wrap1").innerHTML = html1 + ew;
+document.getElementById("wrap2").innerHTML = html2;
 
 function update() {
   document.getElementById("chance").innerHTML = "남은 기회: " + chance;
   document.getElementById("message").innerHTML = message;
-  for (var i = 0; i < 4; i++){
-    document.getElementById(donelist[i]).innerHTML = dones[i];
-  }
 }
 
 function arrcmp(arr1, arr2){
@@ -42,9 +50,9 @@ function gridprint(arr1){
 function checkguess() {
   guess = [];
   for (var i = 0; i < 9; i++){
-    var tmp = document.getElementById("guess" + String(i + 1)).value;
+    var tmp = document.getElementById("guess" + i).value;
     if (tmp !== "" && !isNaN(tmp)) guess.push([tmp, parseInt(i / 3), i % 3]);
-    document.getElementById("guess" + String(i + 1)).value = '';
+    document.getElementById("guess" + i).value = '';
   }
   if (guess.length < 4) {
     message = "숫자 4개를 채워주세요";
@@ -68,7 +76,8 @@ function checkguess() {
     }
   }
   message = "<br>";
-  dones[(8 - chance) % 4] += gridprint(guess) + res[3] + "S " + res[2] + "B " + res[1] + "I<br><br>";
+  var tmp = document.getElementById("done"+(8-chance));
+  tmp.innerHTML += gridprint(guess) + res[3] + "S " + res[2] + "B " + res[1] + "I";
   chance--; 
   if (res[3] === 4) clear();
   else if (chance === 0) gameover();
@@ -80,15 +89,15 @@ submit.addEventListener('click', checkguess);
 function gameover() {
   guess.disabled = true;
   submit.disabled = true;
-  message = "아깝네요 ㅠㅠ 정답은 옆에서 확인하세요!";
-  document.getElementById("answer").innerHTML = gridprint(number) + "정답";
+  message = "아깝네요 ㅠㅠ <br> 정답은 옆에서 확인하세요!";
+  document.getElementById("done8").innerHTML = gridprint(number) + "정답";
   update();
 }
 
 function clear() {
   guess.disabled = true;
   submit.disabled = true;
-  message = "정답입니다! 이 게임의 코드는 " + crypt('4dmy8rewp') + "입니다";
+  message = "정답입니다! <br> 이 게임의 코드는 " + crypt('4dmy8rewp') + "입니다";
   update();
 }
 
@@ -98,7 +107,7 @@ function resetgame() {
   let arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   let loc = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   number = [], guess = [], message = "<br>";
-  chance = 8, dones = ["","","",""]; 
+  chance = 8, dones = ["","",""]; 
 
   for (var i = 0; i < 4; i++){
     var tmp1 = Math.floor(Math.random() * (10 - i));
@@ -107,8 +116,10 @@ function resetgame() {
     arr.splice(tmp1, 1);
     loc.splice(tmp2, 1);
   }
-  document.getElementById("answer").innerHTML = ""; 
   update();
+  for (var i = 0; i < 9; i++){
+    document.getElementById("done"+i).innerHTML = "";
+  }
 }
 
 resetgame();

@@ -1,16 +1,22 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Amsterdam';
+  src:local('글꼴/암스테르담.woff2'),
+      local('글꼴/암스테르담.woff'), 
+      url('글꼴/암스테르담.woff2') format('woff2'),
+      url('글꼴/암스테르담.woff') format('woff');
+}
+
 * {
-  font-size:16pt;
+  font-family: 'Amsterdam';
+  font-weight: bold;
+  font-size:20pt;
   text-align:center;
-  align="center"
-  font-family: sans-serif;
 }
 
 html { 
-  font-family:Arial;
   text-align:center;
-  align="center"
 }
 
 body, table {
@@ -26,7 +32,7 @@ table{
 #guess {
   width:150px;
   height:36px;
-  font-size:25px;
+  font-size:27px;
   margin-left: 10px;
 }
 
@@ -37,8 +43,7 @@ table{
   border:0px solid #000000;
   cursor:pointer;
   color:#ffffff;
-  font-family:Arial;
-  font-size:19px;
+  font-size:23px;
   font-weight:bold;
   padding:7px 22px;
   text-decoration:none;
@@ -62,7 +67,7 @@ td {
   color:#000000;
   display:tabel-cell;
   text-align:center;
-  font-size:23px;
+  font-size:26px;
   height: 110px;
   width: 110px;
   line-height: 45px;
@@ -75,6 +80,6 @@ td {
 }
 
 .res{
-  font-size: 27px;
+  font-size: 30px;
   margin: 0px 0px 30px 20px;
 }

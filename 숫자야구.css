@@ -1,34 +1,38 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Amsterdam';
+  src:local('글꼴/암스테르담.woff2'),
+      local('글꼴/암스테르담.woff'), 
+      url('글꼴/암스테르담.woff2') format('woff2'),
+      url('글꼴/암스테르담.woff') format('woff');
+}
+
 * {
-  font-size:16pt;
+  font-family: 'Amsterdam';
+  font-weight: bold;
+  font-size:20pt;
   text-align:center;
-  align="center"
-  font-family: sans-serif;
 }
 
 html { 
-  font-family:Arial;
   text-align:center;
-  align="center"
 }
 
 body {
   margin: auto;
 }
 
+p{
+  font-size:30px;
+  text-align:center;
+}
+
 #guess {
   width:80px;
   height:36px;
-  font-size:25px;
+  font-size:28px;
   margin-left: 10px;
-}
-
-p{
-  font-family:Arial;
-  font-size:25px;
-  text-align:center;
-  align="center"
 }
 
 #newgame, #submit {
@@ -38,8 +42,7 @@ p{
   border:0px solid #000000;
   cursor:pointer;
   color:#ffffff;
-  font-family:Arial;
-  font-size:19px;
+  font-size:23px;
   font-weight:bold;
   padding:7px 22px;
   text-decoration:none;

@@ -28,7 +28,7 @@ function timer(){
   document.getElementById("time").innerHTML = time;
   if (time >= limit){
     clearInterval(clock);
-    document.getElementById("message").innerHTML = "시간이 초과되었습니다";
+    document.getElementById("message").innerHTML = "<br>시간이 초과되었습니다";
   }
 }
 
@@ -46,7 +46,7 @@ function updateboard(){
   for (var i = 0; i < 16; i++) {
     if (addseq[i] !== i) return;
   }
-  document.getElementById("message").innerHTML = "성공입니다! 이 게임의 코드는 " + crypt('s7fli4tsx') + "입니다";
+  document.getElementById("message").innerHTML = "<br>성공입니다! 이 게임의 코드는 " + crypt('s7fli4tsx') + "입니다";
   clearInterval(clock);
 }
 
