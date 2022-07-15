@@ -92,14 +92,21 @@ window.addEventListener("load",function(){
   document.addEventListener("keydown",function(){
     if (time < 0) return;
     switch (event.keyCode) {
-      case 37: swap(0,1); break; //좌
-      case 65: swap(0,1); break; //a
-      case 38: swap(1,0); break; //상
-      case 87: swap(1,0); break; //w
-      case 39: swap(0,-1); break; //우
-      case 68: swap(0,-1); break; //d
-      case 40: swap(-1,0); break; //하
-      case 83: swap(-1,0); break; //s
+      case 37: //좌
+      case 65: //a
+      case 74: swap(0,1); break; //j
+
+      case 38: //상
+      case 87: //w
+      case 73: swap(1,0); break; //i
+
+      case 39: //우
+      case 68: //d
+      case 76: swap(0,-1); break; //l
+
+      case 40: //하
+      case 83: //s
+      case 75: swap(-1,0); break; //k
     }
     updateboard();
   });
