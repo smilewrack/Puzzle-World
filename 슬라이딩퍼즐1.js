@@ -101,6 +101,7 @@ start.onclick = function () {
 };
 
 function swap2(a){
+  if (time < 0) return;
   var k = locx*4+locy;
   if (a%4 && a-1 === k) swap(0,1,1);
   else if ((a+1)%4 && a+1 === k) swap(0,-1,1); 
